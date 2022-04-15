@@ -198,4 +198,4 @@ export default {
     authColumn: 'Auth column',
     resizeParentHeightTable: 'resizeParentHeightTable',
   },
-};
+}
