@@ -45,10 +45,12 @@ export function useFormRules(formData?: Recordable) {
   const getSmsFormRule = computed(() => createRule(t('sys.login.smsPlaceholder')))
   const getMobileFormRule = computed(() => createRule(t('sys.login.mobilePlaceholder')))
 
+  // 校验是否勾选协议
   const validatePolicy = async (_: RuleObject, value: boolean) => {
     return !value ? Promise.reject(t('sys.login.policyPlaceholder')) : Promise.resolve()
   }
 
+  // 校验密码
   const validateConfirmPassword = (password: string) => {
     return async (_: RuleObject, value: string) => {
       if (!value) {
@@ -61,6 +63,7 @@ export function useFormRules(formData?: Recordable) {
     }
   }
 
+  // 根据Login state确定表单验证规则
   const getFormRules = computed((): { [k: string]: Rule | Rule[] } => {
     const accountFormRule = unref(getAccountFormRule)
     const passwordFormRule = unref(getPasswordFormRule)
