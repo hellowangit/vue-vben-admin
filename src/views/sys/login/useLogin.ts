@@ -107,7 +107,7 @@ export function useFormRules(formData?: Recordable) {
   return { getFormRules }
 }
 
-function createRule(message: string) {
+function createRule(message: string): ValidationRule[] {
   return [
     {
       required: true,
