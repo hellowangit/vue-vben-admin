@@ -42,7 +42,7 @@ const setting: ProjectConfig = {
   colorWeak: false,
 
   // Whether to cancel the menu, the top, the multi-tab page display, for possible embedded in other systems
-  fullContent: true,
+  fullContent: false,
 
   // content mode
   contentMode: ContentEnum.FULL,
