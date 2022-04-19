@@ -10,11 +10,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+
 export default defineComponent({
   name: 'AButton',
   inheritAttrs: false,
 })
 </script>
+
 <script lang="ts" setup>
 import { computed, unref } from 'vue'
 import { Button } from 'ant-design-vue'

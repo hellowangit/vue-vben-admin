@@ -76,7 +76,7 @@ export class Memory<T = any, V = any> {
 
   remove<K extends keyof T>(key: K) {
     const item = this.get(key)
-    Reflect.deleteProperty(this.cache, key)
+    Reflect.deleteProperty(this.cache, key) // like keywork delete
     if (item) {
       clearTimeout(item.timeoutId!)
       return item.value

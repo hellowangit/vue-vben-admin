@@ -58,6 +58,7 @@ export interface HeaderSetting {
   showSearch: boolean
 }
 
+// 本地化设置
 export interface LocaleSetting {
   showPicker: boolean
   // Current language
@@ -79,6 +80,7 @@ export interface TransitionSetting {
   openNProgress: boolean
 }
 
+// 项目配置
 export interface ProjectConfig {
   // Storage location of permission related information
   permissionCacheType: CacheTypeEnum
